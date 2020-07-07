@@ -1,0 +1,54 @@
+#!/bin/bash
+
+# Default programs:
+export EDITOR="vim"
+export TERMINAL="st"
+export BROWSER="firefox"
+export READER="zathura"
+export FILE="nnn"
+
+#Directories
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export HISTFILE="$XDG_DATA_HOME"/bash/history
+#Set XDG_RUNTIME_DIR
+if test -z "${XDG_RUNTIME_DIR}"; then
+      export XDG_RUNTIME_DIR=/tmp/${UID}-runtime-dir
+      if ! test -d "${XDG_RUNTIME_DIR}"; then
+          mkdir "${XDG_RUNTIME_DIR}"
+          chmod 0700 "${XDG_RUNTIME_DIR}"
+      fi
+fi
+export INPUTRC="$XDG_CONFIG_HOME"/readline/inputrc
+export ANDROID_SDK_HOME="$XDG_CONFIG_HOME"/android
+export LESSKEY="$XDG_CONFIG_HOME"/less/lesskey
+export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+#add .local/bin to path
+export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
+export NOTMUCH_CONFIG="$XDG_CONFIG_HOME"/notmuch/notmuchrc
+export NMBGIT="$XDG_DATA_HOME"/notmuch/nmbug
+export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
+export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
+export PYTHONSTARTUP="$XDG_CONFIG_HOME"/python/pythonstartup
+export PASSWORD_STORE_DIR="$HOME"/dc/projects/github/password-store
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+
+#alias
+alias calcurse='calcurse -C "$XDG_CONFIG_HOME"/calcurse -D "$XDG_DATA_HOME"/calcurse'
+alias calcurse-caldav='calcurse-caldav --config $XDG_CONFIG_HOME/calcurse/caldav/config --lockfile $XDG_DATA_HOME/calcurse/lock --syncdb $XDG_DATA_HOME/calcurse/sync.db --datadir $XDG_DATA_HOME/calcurse/ --hookdir $XDG_CONFIG_HOME/calcurse/hooks'
+alias startx='startx $XDG_CONFIG_HOME/X11/xinitrc'
+
+#colorize
+alias \
+	ls="ls -hN --color=auto --group-directories-first" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+	ccat="highlight --out-format=ansi" 
+
+# These common commands are just too long! Abbreviate them.
+alias \
+	xi="doas xbps-install" \
+	xr="doas xbps-remove" \
+	xq="xbps-query"

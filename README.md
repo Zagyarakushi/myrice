@@ -1,2 +1,2 @@
-# myrice
+# dotfiles
 
