@@ -1,0 +1,22 @@
+#!/bin/sh
+
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+
+mpd &
+dunst &
+dwmblocks &
+fcitx &
+setxkbmap -option caps:escape &
+xset r rate 300 50 &
+xrandr --output HDMI-A-0 --mode 1920x1080 --rate 71.91 &
+redshift -P -O 3333 &
+xwallpaper --daemon --zoom $XDG_CONFIG_HOME/wallpaper/70rTLjo.jpg &
+picom --experimental-backends --backend glx -b &
+
+#lock
+xset s 600 30 &
+xss-lock -n "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'" -- slock &
+
+exec dwm

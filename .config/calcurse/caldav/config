@@ -1,0 +1,23 @@
+[General]
+# Path to the calcurse binary that is used for importing/exporting items.
+Binary = calcurse
+
+# Host name of the server that hosts CalDAV.
+Hostname = 
+
+# Path to the CalDAV calendar on the host specified above.
+Path = 
+
+InsecureSSL = Yes
+
+HTTPS = No
+
+SyncFilter = cal,todo
+
+DryRun = No
+
+Verbose = Yes
+
+[Auth]
+Username = 
+Password = 
