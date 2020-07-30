@@ -64,7 +64,7 @@ webcam() { ffmpeg \
 	-f v4l2 \
 	-i /dev/video0 \
 	-video_size 640x480 \
-	"$HOME/webcam-$(date '+%y%m%d-%H%M-%S').mkv" &
+	"$HOME/webcam-$(date '+y%m%d-%H%M-%S').mkv" &
 	echo $! > /tmp/recordingpid
 	updateicon "🎥"
 	}
