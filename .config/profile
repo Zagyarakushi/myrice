@@ -7,6 +7,11 @@ export BROWSER="firefox"
 export READER="zathura"
 export FILE="nnn"
 
+#fcitx mozc
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+
 #Directories
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
