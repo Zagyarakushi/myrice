@@ -1,33 +1,6 @@
-#show-read-feeds no
 auto-reload yes
 
 external-url-viewer "urlscan -dc -r 'linkhandler {}'"
-
-bind-key j down
-bind-key k up
-bind-key j next articlelist
-bind-key k prev articlelist
-bind-key J next-feed articlelist
-bind-key K prev-feed articlelist
-bind-key G end
-bind-key g home
-bind-key d pagedown
-bind-key u pageup
-bind-key l open
-bind-key h quit
-bind-key a toggle-article-read
-bind-key n next-unread
-bind-key N prev-unread
-bind-key D pb-download
-bind-key U show-urls
-bind-key x pb-delete
-
-color listnormal cyan default
-color listfocus black yellow standout bold
-color listnormal_unread blue default
-color listfocus_unread yellow default bold
-color info red black bold
-color article white default bold
 
 browser linkhandler
 macro , open-in-browser
@@ -39,22 +12,30 @@ macro p set browser "dmenuhandler" ; open-in-browser ; set browser linkhandler
 macro c set browser "xsel -b <<<" ; open-in-browser ; set browser linkhandler
 macro C set browser "youtube-viewer --comments=%u" ; open-in-browser ; set browser linkhandler
 
-color listnormal cyan default
-color listfocus black yellow standout bold
-color listnormal_unread green default
-color listfocus_unread yellow default bold
-color info red black bold
-color article white default bold
+unbind-key j
+unbind-key k
+unbind-key J
+unbind-key K
+unbind-key G
+unbind-key g
+bind-key j down
+bind-key k up
+bind-key l open
+bind-key h quit
+bind-key J next
+bind-key K prev
+bind-key g home
+bind-key G end
+bind-key d pagedown
+bind-key u pageup
+bind-key s sort
+bind-key S rev-sort
 
-highlight all "---.*---" yellow
-highlight feedlist ".*(0/0))" black
-highlight article "(^Feed:.*|^Title:.*|^Author:.*)" cyan default bold
-highlight article "(^Link:.*|^Date:.*)" default default
-highlight article "https?://[^ ]+" green default
-highlight article "^(Title):.*$" blue default
-highlight article "\\[[0-9][0-9]*\\]" magenta default bold
-highlight article "\\[image\\ [0-9]+\\]" green default bold
-highlight article "\\[embedded flash: [0-9][0-9]*\\]" green default bold
-highlight article ":.*\\(link\\)$" cyan default
-highlight article ":.*\\(image\\)$" blue default
-highlight article ":.*\\(embedded flash\\)$" magenta default
+
+color background            color223     default
+color listnormal            color250     default
+color listnormal_unread     color223     default    bold
+color listfocus             color250     color239
+color listfocus_unread      color223     color239   bold
+color info                  color166     default    bold
+color article               color223     default
