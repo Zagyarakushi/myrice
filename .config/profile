@@ -5,7 +5,7 @@ export EDITOR="vim"
 export TERMINAL="st"
 export BROWSER="firefox"
 export READER="zathura"
-export FILE="nnn"
+export FILE="lf"
 
 #fcitx mozc
 export GTK_IM_MODULE=fcitx
@@ -39,18 +39,38 @@ export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 export PYTHONSTARTUP="$XDG_CONFIG_HOME"/python/pythonstartup
 export PASSWORD_STORE_DIR="$HOME"/dc/projects/github/password-store
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+export IGNOREEOF=100
+export HISTCONTROL=ignoredups:erasedups   # no duplicate entries
 
 #alias
 alias calcurse='calcurse -C "$XDG_CONFIG_HOME"/calcurse -D "$XDG_DATA_HOME"/calcurse'
 alias calcurse-caldav='calcurse-caldav --config $XDG_CONFIG_HOME/calcurse/caldav/config --lockfile $XDG_DATA_HOME/calcurse/lock --syncdb $XDG_DATA_HOME/calcurse/sync.db --datadir $XDG_DATA_HOME/calcurse/ --hookdir $XDG_CONFIG_HOME/calcurse/hooks'
 alias startx='startx $XDG_CONFIG_HOME/X11/xinitrc'
 
+# confirm before overwriting something
+alias cp="cp -i"
+alias mv='mv -i'
+alias rm='rm -i'
+
+
+# Changing "ls" to "exa"
+alias ls='exa -al --color=always --group-directories-first' # my preferred listing
+alias la='exa -a --color=always --group-directories-first'  # all files and dirs
+alias ll='exa -l --color=always --group-directories-first'  # long format
+alias lt='exa -aT --color=always --group-directories-first' # tree listing
+alias l.='exa -a | egrep "^\."'
+
 #colorize
 alias \
 	ls="ls -hN --color=auto --group-directories-first" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
-	ccat="highlight --out-format=ansi" 
+	ccat="highlight --out-format=ansi" \
+	ip="ip -color=auto" \
+	egrep="egrep --color=auto" \
+	fgrep="fgrep --color=auto"
+
+
 
 # These common commands are just too long! Abbreviate them.
 alias \
