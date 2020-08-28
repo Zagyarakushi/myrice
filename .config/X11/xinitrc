@@ -11,6 +11,7 @@ xwallpaper --zoom ~/.config/wallpaper/futuristiccity.jpg &
 xrandr --output HDMI-A-0 --mode 1920x1080 --rate 71.91 --dpi 103 &
 redshift &
 xrdb -merge $XDG_CONFIG_HOME/X11/xresources &
+emacs --daemon &
 
 #lock
 xset s 600 30 &

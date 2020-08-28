@@ -1,11 +1,13 @@
 #!/bin/bash
 
 # Default programs:
-export EDITOR="vim"
 export TERMINAL="st"
 export BROWSER="firefox"
 export READER="zathura"
 export FILE="lf"
+export ALTERNATE_EDITOR=""                # setting for emacsclient
+export EDITOR="emacsclient -t -a ''"      # $EDITOR use Emacs in terminal
+export VISUAL="emacsclient -c -a emacs"   # $VISUAL use Emacs in GUI mode
 
 #fcitx mozc
 export GTK_IM_MODULE=fcitx
@@ -46,12 +48,8 @@ export HISTCONTROL=ignoredups:erasedups   # no duplicate entries
 alias calcurse='calcurse -C "$XDG_CONFIG_HOME"/calcurse -D "$XDG_DATA_HOME"/calcurse'
 alias calcurse-caldav='calcurse-caldav --config $XDG_CONFIG_HOME/calcurse/caldav/config --lockfile $XDG_DATA_HOME/calcurse/lock --syncdb $XDG_DATA_HOME/calcurse/sync.db --datadir $XDG_DATA_HOME/calcurse/ --hookdir $XDG_CONFIG_HOME/calcurse/hooks'
 alias startx='startx $XDG_CONFIG_HOME/X11/xinitrc'
-
-# confirm before overwriting something
-alias cp="cp -i"
-alias mv='mv -i'
-alias rm='rm -i'
-
+alias em="/usr/bin/emacs -nw"
+alias emacs="emacsclient -c -a 'emacs'"
 
 # Changing "ls" to "exa"
 alias ls='exa -al --color=always --group-directories-first' # my preferred listing
@@ -70,7 +68,78 @@ alias \
 	egrep="egrep --color=auto" \
 	fgrep="fgrep --color=auto"
 
-
+# This is the list for lf icons:
+export LF_ICONS="di=📁:\
+fi=📃:\
+tw=🤝:\
+ow=📂:\
+ln=⛓:\
+or=❌:\
+ex=🎯:\
+*.txt=✍:\
+*.mom=✍:\
+*.me=✍:\
+*.ms=✍:\
+*.png=🖼:\
+*.webp=🖼:\
+*.ico=🖼:\
+*.jpg=📸:\
+*.jpe=📸:\
+*.jpeg=📸:\
+*.gif=🖼:\
+*.svg=🗺:\
+*.tif=🖼:\
+*.tiff=🖼:\
+*.xcf=🖌:\
+*.html=🌎:\
+*.xml=📰:\
+*.gpg=🔒:\
+*.css=🎨:\
+*.pdf=📚:\
+*.djvu=📚:\
+*.epub=📚:\
+*.csv=📓:\
+*.xlsx=📓:\
+*.tex=📜:\
+*.md=📘:\
+*.r=📊:\
+*.R=📊:\
+*.rmd=📊:\
+*.Rmd=📊:\
+*.m=📊:\
+*.mp3=🎵:\
+*.opus=🎵:\
+*.ogg=🎵:\
+*.m4a=🎵:\
+*.flac=🎼:\
+*.mkv=🎥:\
+*.mp4=🎥:\
+*.webm=🎥:\
+*.mpeg=🎥:\
+*.avi=🎥:\
+*.zip=📦:\
+*.rar=📦:\
+*.7z=📦:\
+*.tar.gz=📦:\
+*.z64=🎮:\
+*.v64=🎮:\
+*.n64=🎮:\
+*.gba=🎮:\
+*.nes=🎮:\
+*.gdi=🎮:\
+*.1=ℹ:\
+*.nfo=ℹ:\
+*.info=ℹ:\
+*.log=📙:\
+*.iso=📀:\
+*.img=📀:\
+*.bib=🎓:\
+*.ged=👪:\
+*.part=💔:\
+*.torrent=🔽:\
+*.jar=♨:\
+*.java=♨:\
+"
 
 # These common commands are just too long! Abbreviate them.
 alias \
