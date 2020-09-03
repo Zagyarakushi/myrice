@@ -1,7 +1,7 @@
 --ignore-errors
 
 # Save in ~/Videos
--o ~/vd/%(title)s.%(ext)s
+-o ~/Videos/%(title)s.%(ext)s
 
 # Prefer 1080p or lower resolutions
 -f bestvideo[ext=mp4][height<1080]+bestaudio[ext=m4a]/bestvideo[ext=webm][height<1080]+bestaudio[ext=webm]/bestvideo[height<1080]+bestaudio/best[height<1080]/best
