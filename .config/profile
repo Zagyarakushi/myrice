@@ -50,6 +50,7 @@ alias calcurse-caldav='calcurse-caldav --config $XDG_CONFIG_HOME/calcurse/caldav
 alias startx='startx $XDG_CONFIG_HOME/X11/xinitrc'
 alias em="/usr/bin/emacs -nw"
 alias emacs="emacsclient -c -a 'emacs'"
+alias irssi='irssi --config=$XDG_CONFIG_HOME"/irssi/config --home="$XDG_DATA_HOME"/irssi'
 
 # Changing "ls" to "exa"
 alias ls='exa -al --color=always --group-directories-first' # my preferred listing
