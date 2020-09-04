@@ -39,7 +39,7 @@ export NMBGIT="$XDG_DATA_HOME"/notmuch/nmbug
 export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 export PYTHONSTARTUP="$XDG_CONFIG_HOME"/python/pythonstartup
-export PASSWORD_STORE_DIR="$HOME"/Documents/projects/github/password-store
+export PASSWORD_STORE_DIR="$HOME"/dc/projects/github/password-store
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export IGNOREEOF=100
 export HISTCONTROL=ignoredups:erasedups   # no duplicate entries
@@ -57,7 +57,7 @@ alias ls='exa -al --color=always --group-directories-first' # my preferred listi
 alias la='exa -a --color=always --group-directories-first'  # all files and dirs
 alias ll='exa -l --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
-alias l.='exa -a | egrep "^\."'
+alias l.='exa -a --color=always --group-directories-first | egrep "^\."'
 
 #colorize
 alias \
