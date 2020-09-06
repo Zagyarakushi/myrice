@@ -14,7 +14,7 @@ map p print
 set selection-clipboard clipboard
 
 set recolor true
-set default-bg rgba(51,51,51,0.8)
-set recolor-lightcolor rgba(51,51,51,0)
+set default-bg rgba(45,45,45,0.9)
+set recolor-lightcolor rgba(45,45,45,0)
 set recolor-darkcolor rgba(235,219,178,1)
 set adjust-open "width"
