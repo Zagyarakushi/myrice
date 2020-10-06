@@ -5,14 +5,20 @@ export TERMINAL="st"
 export BROWSER="firefox"
 export READER="zathura"
 export FILE="lf"
-export ALTERNATE_EDITOR=""                # setting for emacsclient
-export EDITOR="emacsclient -t -a ''"      # $EDITOR use Emacs in terminal
-export VISUAL="emacsclient -c -a emacs"   # $VISUAL use Emacs in GUI mode
+export PAGER="less"
+export EDITOR="nvim"
 
 #fcitx mozc
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
+
+#zsh stuff
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
+export ZSH_AUTOSUGGEST_HIGHLIGHT_COLOR="fg=3"
+
+#firefox
+MOZ_WEBRENDER=1
 
 #Directories
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -43,13 +49,13 @@ export PASSWORD_STORE_DIR="$HOME"/dc/projects/github/password-store
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export IGNOREEOF=100
 export HISTCONTROL=ignoredups:erasedups   # no duplicate entries
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+export KODI_DATA="${XDG_DATA_HOME:-$HOME/.local/share}/kodi"
 
 #alias
 alias calcurse='calcurse -C "$XDG_CONFIG_HOME"/calcurse -D "$XDG_DATA_HOME"/calcurse'
 alias calcurse-caldav='calcurse-caldav --config $XDG_CONFIG_HOME/calcurse/caldav/config --lockfile $XDG_DATA_HOME/calcurse/lock --syncdb $XDG_DATA_HOME/calcurse/sync.db --datadir $XDG_DATA_HOME/calcurse/ --hookdir $XDG_CONFIG_HOME/calcurse/hooks'
 alias startx='startx $XDG_CONFIG_HOME/X11/xinitrc'
-alias em="/usr/bin/emacs -nw"
-alias emacs="emacsclient -c -a 'emacs'"
 alias irssi='irssi --config=$XDG_CONFIG_HOME"/irssi/config --home="$XDG_DATA_HOME"/irssi'
 
 # Changing "ls" to "exa"
@@ -147,3 +153,9 @@ alias \
 	xi="doas xbps-install" \
 	xr="doas xbps-remove" \
 	xq="xbps-query"
+
+[[ -f ~/.zshrc ]] && . ~/.zshrc
+
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+	exec startx $XDG_CONFIG_HOME/X11/xinitrc
+fi
