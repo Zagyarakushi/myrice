@@ -13,10 +13,6 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
-#zsh stuff
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
-export ZSH_AUTOSUGGEST_HIGHLIGHT_COLOR="fg=3"
-
 #firefox
 MOZ_WEBRENDER=1
 
@@ -154,7 +150,7 @@ alias \
 	xr="doas xbps-remove" \
 	xq="xbps-query"
 
-[[ -f ~/.zshrc ]] && . ~/.zshrc
+[[ -f ~/.bashrc ]] && . ~/.bashrc
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 	exec startx $XDG_CONFIG_HOME/X11/xinitrc
