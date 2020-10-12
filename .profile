@@ -14,7 +14,7 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
 #firefox
-MOZ_WEBRENDER=1
+export MOZ_WEBRENDER=1
 
 #Directories
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -47,6 +47,7 @@ export IGNOREEOF=100
 export HISTCONTROL=ignoredups:erasedups   # no duplicate entries
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export KODI_DATA="${XDG_DATA_HOME:-$HOME/.local/share}/kodi"
+export WINEPREFIX="$XDG_DATA_HOME"/wineprefixes/default
 
 #alias
 alias calcurse='calcurse -C "$XDG_CONFIG_HOME"/calcurse -D "$XDG_DATA_HOME"/calcurse'
@@ -55,7 +56,7 @@ alias startx='startx $XDG_CONFIG_HOME/X11/xinitrc'
 alias irssi='irssi --config=$XDG_CONFIG_HOME"/irssi/config --home="$XDG_DATA_HOME"/irssi'
 
 # Changing "ls" to "exa"
-alias ls='exa -al --color=always --group-directories-first' # my preferred listing
+alias ls='exa --color=always --group-directories-first' # my preferred listing
 alias la='exa -a --color=always --group-directories-first'  # all files and dirs
 alias ll='exa -l --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
@@ -63,7 +64,6 @@ alias l.='exa -a | egrep "^\."'
 
 #colorize
 alias \
-	ls="ls -hN --color=auto --group-directories-first" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi" \
