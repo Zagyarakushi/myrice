@@ -1,5 +1,7 @@
 #!/bin/sh
 
+dbus-update-activation-environment DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
+
 mpd &
 dunst &
 dwmblocks &
@@ -16,4 +18,4 @@ picom --experimental-backends &
 xset s 600 30 &
 xss-lock -n "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'" -- slock &
 
-exec dwm
+dbus-run-session dwm
