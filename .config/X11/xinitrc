@@ -18,4 +18,4 @@ picom --experimental-backends &
 xset s 600 30 &
 xss-lock -n "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'" -- slock &
 
-dbus-launch --exit-with-session dwm
+dbus-run-session -- dwm
