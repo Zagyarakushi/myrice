@@ -5,6 +5,8 @@ set -x FILE lf
 set -x PAGER less
 set -x EDITOR vim
 
+set -x _JAVA_AWT_WM_NONREPARENTING 1 #required for java to run to display apps properly
+
 #Get rid of greeting
 set fish_greeting 
 set fish_color_command 5c5cd6
@@ -37,7 +39,7 @@ set -x KODI_DATA $XDG_DATA_HOME/kodi
 set -x WINEPREFIX $XDG_DATA_HOME/wineprefixes/default
 
 #set path
-set PATH $HOME/.local/bin $PATH
+set PATH $HOME/.local/bin $HOME/.local/share/flatpak/exports/bin $PATH
 
 #set xdg_runtime_dir
 if test -z $XDG_RUNTIME_DIR
