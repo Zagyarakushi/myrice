@@ -3,7 +3,9 @@ set -x BROWSER firefox
 set -x READER zathura
 set -x FILE lf
 set -x PAGER less
-set -x EDITOR vim
+set -x EDITOR emacsclient -c
+
+set -x FREETYPE_PROPERTIES truetype:interpreter-version=40
 
 set -x _JAVA_AWT_WM_NONREPARENTING 1 #required for java to run to display apps properly
 
