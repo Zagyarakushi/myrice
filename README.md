@@ -7,7 +7,7 @@
 
 Note: This project was originally pushed to Gitlab and as such, all issues, pull/merge requests and any other disucussion or changes should be made [here](https://gitlab.com/zagyarakushi/myrice). (In case you are wondering, I have this mirrored on Github so people can follow the project even if they prefer Github. Also it acts as a backup.)
 
-[![License](https://img.shields.io/badge/License-MIT-lightgray.svg?style=flat-square)]()
+![License](https://img.shields.io/badge/License-MIT-lightgray.svg?style=flat-square)
 
 
 # Table of contents
@@ -29,6 +29,7 @@ This repository contains my dotfiles which I use daily.
 
 ![screenshot](https://gitlab.com/zagyarakushi/myrice/-/raw/master/screenshots/desktop.png)
 
+Watch the video ![Here](https://invidious.snopyta.org/watch?v=9eKI2tUn9XM)
 
 # 📖 Installation
 ------------
