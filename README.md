@@ -27,7 +27,7 @@ Note: This project was originally pushed to Gitlab and as such, all issues, pull
 
 This repository contains my dotfiles which I use daily.
 
-![screenshot]()
+![screenshot](https://gitlab.com/zagyarakushi/myrice/-/raw/master/screenshots/desktop.png)
 
 
 # 📖 Installation
