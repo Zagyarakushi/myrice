@@ -29,7 +29,7 @@ This repository contains my dotfiles which I use daily.
 
 ![screenshot](https://gitlab.com/zagyarakushi/myrice/-/raw/master/screenshots/desktop.png)
 
-Watch the video ![Here](https://invidious.snopyta.org/watch?v=9eKI2tUn9XM)
+Watch the video [Here](https://invidious.snopyta.org/watch?v=9eKI2tUn9XM)
 
 # 📖 Installation
 ------------
