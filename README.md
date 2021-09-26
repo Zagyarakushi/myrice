@@ -37,7 +37,7 @@ Other programs and stuff:
 * [dwm](https://gitlab.com/zagyarakushi/mydwm)
 * [dwmblocks](https://gitlab.com/zagyarakushi/mydwmblocks)
 * [slock](https://gitlab.com/zagyarakushi/myslock)
-* [demnu](https://gitlab.com/zagyarakushi/mydmenu)
+* [dmenu](https://gitlab.com/zagyarakushi/mydmenu)
 
 # 📖 Installation
 ------------
