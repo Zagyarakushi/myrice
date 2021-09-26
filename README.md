@@ -31,6 +31,13 @@ This repository contains my dotfiles which I use daily.
 
 Watch the video [Here](https://invidious.snopyta.org/watch?v=9eKI2tUn9XM)
 
+Other programs and stuff:
+[st](https://gitlab.com/zagyarakushi/myst)
+[dwm](https://gitlab.com/zagyarakushi/mydwm)
+[dwmblocks](https://gitlab.com/zagyarakushi/mydwmblocks)
+[slock](https://gitlab.com/zagyarakushi/myslock)
+[demnu](https://gitlab.com/zagyarakushi/mydmenu)
+
 # 📖 Installation
 ------------
 
