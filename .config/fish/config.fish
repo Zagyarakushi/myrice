@@ -39,7 +39,7 @@ set -x GTK2_RC_FILES $XDG_CONFIG_HOME/gtk-2.0/gtkrc
 set -x NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc
 set -x KODI_DATA $XDG_DATA_HOME/kodi
 set -x WINEPREFIX $XDG_DATA_HOME/wineprefixes/default
-set -x set GPG_TTY /dev/pts/2
+set -x GPG_TTY /dev/pts/2
 
 #set path
 set PATH $HOME/.local/bin $HOME/.local/share/flatpak/exports/bin $PATH
