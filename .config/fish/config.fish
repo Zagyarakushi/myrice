@@ -55,5 +55,10 @@ end
 # If running from tty1 start sway
 set TTY1 (tty)
 if test -z "$DISPLAY"; and test $TTY1 = "/dev/tty1"
-  exec startx $XDG_CONFIG_HOME/X11/xinitrc
+  eval (ssh-agent -c)
+  #exec startx $XDG_CONFIG_HOME/X11/xinitrc
+end
+
+function on_exit --on-event fish_exit
+  kill ssh-agent
 end
