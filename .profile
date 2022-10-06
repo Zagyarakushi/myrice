@@ -56,11 +56,11 @@ alias startx='startx $XDG_CONFIG_HOME/X11/xinitrc'
 alias irssi='irssi --config=$XDG_CONFIG_HOME"/irssi/config --home="$XDG_DATA_HOME"/irssi'
 
 # Changing "ls" to "exa"
-alias ls='exa --color=always --group-directories-first' # my preferred listing
-alias la='exa -a --color=always --group-directories-first'  # all files and dirs
-alias ll='exa -l --color=always --group-directories-first'  # long format
-alias lt='exa -aT --color=always --group-directories-first' # tree listing
-alias l.='exa -a | egrep "^\."'
+#alias ls='exa --color=always --group-directories-first' # my preferred listing
+#alias la='exa -a --color=always --group-directories-first'  # all files and dirs
+#alias ll='exa -l --color=always --group-directories-first'  # long format
+#alias lt='exa -aT --color=always --group-directories-first' # tree listing
+#alias l.='exa -a | egrep "^\."'
 
 #colorize
 alias \
@@ -150,8 +150,9 @@ alias \
 	xr="doas xbps-remove" \
 	xq="xbps-query"
 
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+#[[ -f ~/.bashrc ]] && . ~/.bashrc
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-	#exec startx $XDG_CONFIG_HOME/X11/xinitrc
+	eval $(ssh-agent -s)
+	exec startx $XDG_CONFIG_HOME/X11/xinitrc
 fi
