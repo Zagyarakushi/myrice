@@ -3,6 +3,7 @@
 dbus-update-activation-environment DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
 
 pipewire &
+wireplumber &
 pipewire-pulse &
 mpd &
 dunst &
@@ -14,7 +15,7 @@ xrandr --output HDMI-A-0 --mode 1920x1080 --rate 71.91 --dpi 103 &
 redshift &
 xset r rate 300 50 &
 xrdb -merge $XDG_CONFIG_HOME/X11/xresources &
-picom --experimental-backends &
+picom &
 emacs --daemon &
 
 #lock
