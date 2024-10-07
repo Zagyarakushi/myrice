@@ -15,8 +15,10 @@ xrandr --output HDMI-A-0 --mode 1920x1080 --rate 71.91 --dpi 103 &
 redshift &
 xset r rate 300 50 &
 xrdb -merge $XDG_CONFIG_HOME/X11/xresources &
-picom &
+#picom &
 emacs --daemon &
+/usr/libexec/xfce-polkit &
+udiskie &
 
 #lock
 xset s 600 30 &
