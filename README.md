@@ -1,76 +1,79 @@
-<h1 align="center">
-  <br>
-  <a href="https://gitlab.com/zagyarakushi/myrice"><img src="" alt="My dotfiles"></a>
-</h1>
+# Myrice
 
-<h4 align="center">My dotfiles</h4>
+A reproducible Linux environment containing dotfiles, scripts, and configurations for my daily workflow.
 
-Note: This project was originally pushed to Gitlab and as such, all issues, pull/merge requests and any other disucussion or changes should be made [here](https://gitlab.com/zagyarakushi/myrice). (In case you are wondering, I have this mirrored on Github so people can follow the project even if they prefer Github. Also it acts as a backup.)
+Built around a minimal, keyboard-driven desktop using suckless tools and custom scripts.
 
-![License](https://img.shields.io/badge/License-MIT-lightgray.svg?style=flat-square)
+---
 
+## 📸 Preview
 
-# Table of contents
------------------
+![Desktop](https://gitlab.com/zagyarakushi/myrice/-/raw/master/screenshots/desktop.png)
 
-* [Introduction](#introduction)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Known issues and limitations](#known-issues-and-limitations)
-* [Getting help](#getting-help)
-* [Contributing](#contributing)
-* [License](#license)
+[Watch the desktop showcase](https://www.youtube.com/watch?v=9eKI2tUn9XM)
 
+---
 
-# ⚡ Introduction
-------------
+## ✨ Features
 
-This repository contains my dotfiles which I use daily.
+- Minimal X11 desktop environment
+- Custom window manager configuration
+- Personal scripts and utilities
+- Shell configuration
+- Application settings
+- Keyboard-driven workflow
 
-![screenshot](https://gitlab.com/zagyarakushi/myrice/-/raw/master/screenshots/desktop.png)
+---
 
-Watch the video [Here](https://invidious.snopyta.org/watch?v=9eKI2tUn9XM)
+## 🖥️ Components
 
-Other programs and stuff:
+This setup uses:
 
-* [st](https://gitlab.com/zagyarakushi/myst)
-* [dwm](https://gitlab.com/zagyarakushi/mydwm)
-* [dwmblocks](https://gitlab.com/zagyarakushi/mydwmblocks)
-* [slock](https://gitlab.com/zagyarakushi/myslock)
-* [dmenu](https://gitlab.com/zagyarakushi/mydmenu)
+- [dwm](https://gitlab.com/zagyarakushi/mydwm) — window manager
+- [dmenu](https://gitlab.com/zagyarakushi/mydmenu) — application launcher
+- [dwmblocks](https://gitlab.com/zagyarakushi/mydwmblocks) — status bar
+- [st](https://gitlab.com/zagyarakushi/myst) — terminal emulator
+- [slock](https://gitlab.com/zagyarakushi/myslock) — screen locker
 
-# 📖 Installation
-------------
+---
 
-You will need some programs to be installed for the full experience (will be added in the future) but not having a program intalled should not cause any problems.
+## 🚀 Installation
 
+Clone the repository:
 
-# 📝 Usage
------
+```bash
+git clone https://gitlab.com/zagyarakushi/myrice.git
 
-Now go to the directory and copy the required files to the appropriate place. Or copy the entire thing to /home/$USER/ for authentic experience.
-Make sure to restart the computer afterwards.
+cd myrice
+```
 
+Copy the required files to their appropriate locations.
 
-# ⭐ Known issues and limitations
-----------------------------
+---
 
-This project doesn't have any issues in my opinion but you could create an issue if you want something to change.
+## ⚙️ Configuration
 
+This repository contains configuration for:
 
-# ✌️ Getting help
-------------
+- Window management
+- Terminal environment
+- Status bar
+- Application launcher
+- Desktop utilities
+- Custom scripts
 
-You can create an issue and I will try to help you as much as I can.
+---
 
+## 📚 Philosophy
 
-# 🔔 Contributing
-------------
+This setup follows the Unix philosophy:
 
-First read the code of conduct and contributing file. Then you can fork the repository, add your own stuff and create a pull/merge request.
+> Keep systems simple. Understand every component. Automate repetitive tasks.
 
+The goal is a lightweight, fast, and maintainable Linux environment.
 
-# ⚠ License
--------
+---
 
-MIT
+## 📄 License
+
+MIT License
